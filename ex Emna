@@ -1,0 +1,20 @@
+# csftw
+   <label for="text">donner une chainne de carataire </label>
+        <input type="text" id="chaine"><br><br>
+        <label for="text">donner un carataire </label>
+        <input type="text" id="caractere"><br><br>
+        <p id="resultat"></p>
+        <button type="button" onclick="calculer()">calculer</button><br><br>
+
+<script>
+    
+    function calculer(){
+        let ch = document.getElementById("chaine").value;
+        let ca = document.getElementById("caractere").value;
+        let nb = 0 ;
+        for (let x of ch) {
+            if (x==ca)
+                nb++;
+        }
+        document.getElementById("resultat").innerHTML = "le nombre d'occurence de " + ca + " dans la chaine est " + nb ;
+    }
